@@ -1,8 +1,7 @@
 import logging
-from azure.keyvault import KeyVaultClient, KeyVaultAuthentication
-from azure.keyvault import KeyVaultId
 import azure.functions as func
-
+from azure.keyvault.secrets import SecretClient
+from azure.identity import DefaultAzureCredential
 
 
 def main(req: func.HttpRequest) -> func.HttpResponse:
